@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_firstMenu"
+        android:enabled="true"
+        android:icon="@drawable/ic_card_giftcard_black_24dp"
+        android:title="firstMenu" />
+
+    <item
+        android:id="@+id/action_secondMenu"
+        android:enabled="true"
+        android:icon="@drawable/ic_lock_black_24dp"
+        android:title="secondMenu" />
+
+    <item
+        android:id="@+id/action_thirdMenu"
+        android:enabled="true"
+        android:icon="@drawable/ic_add_circle_black_24dp"
+        android:title="thirdMenu" />
+
+</menu>
