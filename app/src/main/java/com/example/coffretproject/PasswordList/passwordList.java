@@ -8,7 +8,15 @@ public class passwordList {
     String siteURL;
     String ID;
     String pw;
-    Date date;
+    String date;
+
+    public passwordList(String title, String siteURL, String ID, String pw, String date) {
+        this.title = title;
+        this.siteURL = siteURL;
+        this.ID = ID;
+        this.pw = pw;
+        this.date = date;
+    }
 
     public String getTitle() {
         return title;
@@ -42,11 +50,11 @@ public class passwordList {
         this.pw = pw;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

@@ -7,19 +7,31 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import androidx.fragment.app.ListFragment;
+import com.example.coffretproject.PasswordList.*;
 
-public class Frag1 extends Fragment {
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
-    private View view;
+public class Frag1 extends ListFragment {
+
+    private ArrayList<passwordList> passwordLists = new ArrayList<>();
+    private passwordListAdapter adpater;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.frag1, container, false);
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        String nowTime = simpleDateFormat.format(new Date());
+
+        adpater = new passwordListAdapter(getActivity(),passwordLists);
+        setListAdapter(adpater);
+
+        passwordLists.add(new passwordList("test","test","test","test", nowTime));
 
 
-
-        return view;
+        return super.onCreateView(inflater, container, savedInstanceState);
     }
 }

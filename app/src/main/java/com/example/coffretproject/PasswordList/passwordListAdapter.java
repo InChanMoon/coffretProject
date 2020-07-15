@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import com.example.coffretproject.R;
 
@@ -36,9 +37,11 @@ public class passwordListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View v = View.inflate(context, R.layout.)
+        View v = View.inflate(context, R.layout.password_list, null);
+        TextView titleTexView = v.findViewById(R.id.titleTextView);
 
 
-        return null;
+
+        return v;
     }
 }

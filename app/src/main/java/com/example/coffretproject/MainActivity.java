@@ -48,8 +48,9 @@ public class MainActivity extends AppCompatActivity {
         frag1 = new Frag1();
         frag2 = new Frag2();
         frag3 = new Frag3();
-        setFrag(1);
+        setFrag(0);
     }
+
 
     public void setFrag(int n) {
         fm = getSupportFragmentManager();
